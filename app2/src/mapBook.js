@@ -14,3 +14,5 @@ export function mapBook(objectWithId) {
     author: mapAuthor(),
   };
 }
+
+export const version = '0.0.1';
