@@ -8,8 +8,9 @@ async function run() {
   const book = mapBook({ id: '1337' });
   console.log('book.positionStr', book.positionStr);
   await sleep(30_000);
-  // Throws an error
-  // TypeError: (__webpack_require__.g.webpackChunkLoad || __webpack_require__.g.fetch || __webpack_require__(...)) is not a function
+  // revalidate not working, cache is only controlled by hash of "remoteEntry.js"
+  // The hash doesn't change when internal/external modules of app2 are changed.
+  // https://github.com/module-federation/nextjs-mf/issues/351
   const shouldReload2 = await revalidate();
   console.log('shouldReload2', shouldReload2);
   console.log('app2/mapBook/version', version);
