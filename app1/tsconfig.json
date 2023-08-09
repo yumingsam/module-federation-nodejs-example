@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    // "module": "ESNext", // ESNext works, default or CommonJS doesn't
+    "declaration": true,
+    "declarationDir": "dist/types",
+    "outDir": "./build/src",
+  },
+}

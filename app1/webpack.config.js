@@ -12,6 +12,17 @@ module.exports = {
   optimization: {
     minimize: false,
   },
+  module: {
+    rules: [
+      {
+        test: /\.tsx?$/,
+        use: 'ts-loader',
+      },
+    ],
+  },
+  resolve: {
+    extensions: ['.ts', '.js'],
+  },
   plugins: [
     new UniversalFederationPlugin({
       isServer: true,
